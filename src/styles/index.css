@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens Urban Spa — cerminkan tailwind.config.js, jangan divergen. */
+:root {
+  --color-primary: #8d006c;
+  --color-deep-accent: #821668;
+  --color-secondary: #d2acca;
+  --color-accent: #e47dae;
+
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+
+  --color-text: #342532;
+  --color-text-muted: #766777;
+  --color-border: #eadde7;
+
+  --radius-card: 12px;
+
+  --wa: #25d366;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  @apply bg-white text-ink-900 font-sans antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #8d006c;
+  color: #ffffff;
+}
+
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

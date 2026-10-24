@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(winget install -e --id OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements --silent)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; npm init -y)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; npm install react react-dom lucide-react; npm install -D vite @vitejs/plugin-react typescript @types/react @types/react-dom tailwindcss@3 postcss autoprefixer)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; npm run build)",
+      "PowerShell(winget search inkscape --accept-source-agreements 2>&1)",
+      "PowerShell(winget search mupdf --accept-source-agreements 2>&1)",
+      "PowerShell(winget install -e --id Inkscape.Inkscape --accept-package-agreements --accept-source-agreements --silent)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Inkscape\\\\bin\\\\inkscape.exe\" \"D:\\\\Test Web\\\\public\\\\brand\\\\signage-raw.svg\" --export-text-to-path --export-plain-svg=\"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" 2>&1)",
+      "PowerShell($ink = \"C:\\\\Program Files\\\\Inkscape\\\\bin\\\\inkscape.exe\"; & $ink \"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" --export-type=png --export-width=512 --export-filename=\"D:\\\\Test Web\\\\public\\\\brand\\\\logo-512.png\" 2>&1 | Select-Object -First 4; & $ink \"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" --export-type=png --export-width=192 --export-filename=\"D:\\\\Test Web\\\\public\\\\brand\\\\logo-192.png\" 2>&1 | Select-Object -First 4; & $ink \"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" --export-type=png --export-width=64 --export-filename=\"D:\\\\Test Web\\\\public\\\\brand\\\\favicon-64.png\" 2>&1 | Select-Object -First 4; Get-ChildItem \"D:\\\\Test Web\\\\public\\\\brand\" | Select-Object Name,Length)",
+      "PowerShell($ink = \"C:\\\\Program Files\\\\Inkscape\\\\bin\\\\inkscape.exe\"; & $ink \"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" --actions=\"select-by-element:text;object-to-path;export-filename:D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg;export-type:svg;export-plain-svg;export-do\" 2>&1 | Select-Object -First 5; Select-String -Path \"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" -Pattern \"<text\" | Measure-Object | Select-Object -ExpandProperty Count)",
+      "PowerShell($ink = \"C:\\\\Program Files\\\\Inkscape\\\\bin\\\\inkscape.exe\"; & $ink \"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" --export-type=png --export-width=512 --export-filename=\"D:\\\\Test Web\\\\public\\\\brand\\\\logo-512.png\" 2>&1 | Select-Object -First 3; & $ink \"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" --export-type=png --export-width=192 --export-filename=\"D:\\\\Test Web\\\\public\\\\brand\\\\logo-192.png\" 2>&1 | Select-Object -First 3; & $ink \"D:\\\\Test Web\\\\public\\\\brand\\\\logo.svg\" --export-type=png --export-width=64 --export-filename=\"D:\\\\Test Web\\\\public\\\\brand\\\\favicon-64.png\" 2>&1 | Select-Object -First 3; Get-ChildItem \"D:\\\\Test Web\\\\public\\\\brand\" | Select-Object Name,Length; Remove-Item \"D:\\\\Test Web\\\\public\\\\brand\\\\signage-raw.svg\" -Force)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; node \"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\urban-rebrand.mjs\")",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; npm run build 2>&1 | Select-Object -Last 12)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; npm run preview -- --port 5174 --strictPort)",
+      "PowerShell($edge = \"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"; if \\(-not \\(Test-Path $edge\\)\\) { $edge = \"C:\\\\Program Files\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\" }; Test-Path $edge; $edge)",
+      "PowerShell($edge = \"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"; & $edge --headless --disable-gpu --no-sandbox --virtual-time-budget=8000 --window-size=1280,9000 --screenshot=\"D:\\\\Test Web\\\\.verify-full-desktop.png\" \"http://localhost:5174/\" 2>&1 | Select-Object -Last 2; Get-ChildItem \"D:\\\\Test Web\\\\.verify-full-desktop.png\" | Select-Object Name,Length)",
+      "mcp__claude-vscode__getDiagnostics"
+    ]
+  }
+}
