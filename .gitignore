@@ -2,3 +2,10 @@ node_modules
 dist
 dist-ssr
 *.local
+tsconfig.tsbuildinfo
+.claude/settings.local.json
+*.log
+.DS_Store
+Thumbs.db
+.vscode/*
+.env*
