@@ -72,8 +72,7 @@ export function Contact() {
           <Card className="reveal lg:col-span-2 !bg-brand-900 !text-blush-100">
             <h3 className="font-display text-xl font-semibold mb-1">Hubungi Langsung</h3>
             <p className="text-sm text-blush-100/70 mb-6">
-              Kontak berikut adalah contoh. Ganti dengan kontak asli di{' '}
-              <code className="text-accent-300">src/config/site.ts</code>.
+              Hubungi kami langsung atau isi formulir — pesanan diteruskan ke WhatsApp.
             </p>
             <ul className="space-y-4 text-sm">
               <li>
@@ -96,24 +95,28 @@ export function Contact() {
                   {SITE.phoneDisplay}
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush-100/10 shrink-0">
-                  <Mail className="h-5 w-5" aria-hidden />
-                </span>
-                <span>
-                  <span className="block text-blush-100/60 text-xs">Email</span>
-                  {SITE.email}
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush-100/10 shrink-0">
-                  <AtSign className="h-5 w-5" aria-hidden />
-                </span>
-                <span>
-                  <span className="block text-blush-100/60 text-xs">Instagram</span>
-                  {SITE.instagram}
-                </span>
-              </li>
+              {SITE.email && (
+                <li className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush-100/10 shrink-0">
+                    <Mail className="h-5 w-5" aria-hidden />
+                  </span>
+                  <span>
+                    <span className="block text-blush-100/60 text-xs">Email</span>
+                    {SITE.email}
+                  </span>
+                </li>
+              )}
+              {SITE.instagram && (
+                <li className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush-100/10 shrink-0">
+                    <AtSign className="h-5 w-5" aria-hidden />
+                  </span>
+                  <span>
+                    <span className="block text-blush-100/60 text-xs">Instagram</span>
+                    {SITE.instagram}
+                  </span>
+                </li>
+              )}
             </ul>
           </Card>
 

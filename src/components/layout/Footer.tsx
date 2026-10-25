@@ -61,17 +61,21 @@ export function Footer() {
                   {SITE.phoneDisplay} (WA/Telp)
                 </a>
               </li>
-              <li className="inline-flex items-center gap-2 text-blush-100/80">
-                <Mail className="h-4 w-4 shrink-0" aria-hidden />
-                {SITE.email}
-              </li>
-              <li className="inline-flex items-center gap-2 text-blush-100/80">
-                <AtSign className="h-4 w-4 shrink-0" aria-hidden />
-                {SITE.instagram}
-              </li>
+              {SITE.email && (
+                <li className="inline-flex items-center gap-2 text-blush-100/80">
+                  <Mail className="h-4 w-4 shrink-0" aria-hidden />
+                  {SITE.email}
+                </li>
+              )}
+              {SITE.instagram && (
+                <li className="inline-flex items-center gap-2 text-blush-100/80">
+                  <AtSign className="h-4 w-4 shrink-0" aria-hidden />
+                  {SITE.instagram}
+                </li>
+              )}
               <li className="inline-flex items-start gap-2 text-blush-100/80">
                 <MapPin className="h-4 w-4 shrink-0 mt-0.5" aria-hidden />
-                <span>Melayani panggilan ke rumah, kos, apartemen, dan hotel (area contoh).</span>
+                <span>Melayani panggilan ke rumah, kos, apartemen, dan hotel (area Jabodetabek).</span>
               </li>
             </ul>
           </div>
@@ -83,8 +87,7 @@ export function Footer() {
             standar layanan yang tercantum.
           </p>
           <p>
-            © {year} {SITE.name}. Seluruh konten halaman ini adalah contoh untuk keperluan
-            pengembangan.
+            © {year} {SITE.name}. Hak cipta dilindungi undang-undang.
           </p>
         </div>
       </div>

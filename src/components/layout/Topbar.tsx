@@ -11,20 +11,24 @@ export function Topbar() {
             <Phone className="h-3.5 w-3.5" aria-hidden />
             {SITE.phoneDisplay}
           </a>
-          <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-1.5 hover:text-accent-300">
-            <Mail className="h-3.5 w-3.5" aria-hidden />
-            {SITE.email}
-          </a>
+          {SITE.email && (
+            <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-1.5 hover:text-accent-300">
+              <Mail className="h-3.5 w-3.5" aria-hidden />
+              {SITE.email}
+            </a>
+          )}
         </div>
         <div className="flex items-center gap-5">
           <span className="inline-flex items-center gap-1.5">
             <Clock className="h-3.5 w-3.5 text-accent-300" aria-hidden />
             {SITE.hours}
           </span>
-          <span className="inline-flex items-center gap-1.5">
-            <AtSign className="h-3.5 w-3.5" aria-hidden />
-            {SITE.instagram}
-          </span>
+          {SITE.instagram && (
+            <span className="inline-flex items-center gap-1.5">
+              <AtSign className="h-3.5 w-3.5" aria-hidden />
+              {SITE.instagram}
+            </span>
+          )}
         </div>
       </div>
     </div>

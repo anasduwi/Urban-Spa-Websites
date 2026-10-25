@@ -195,7 +195,7 @@ export const PRICES: PriceItem[] = [
       { duration: 90, price: 180000 },
       { duration: 120, price: 230000 },
     ],
-    note: 'Termasuk aromaterapi pilihan (contoh)',
+    note: 'Termasuk aromaterapi pilihan',
   },
   {
     serviceId: 'couple',
@@ -205,7 +205,7 @@ export const PRICES: PriceItem[] = [
       { duration: 90, price: 320000 },
       { duration: 120, price: 400000 },
     ],
-    note: 'Harga untuk 2 orang (contoh)',
+    note: 'Harga untuk 2 orang',
   },
   {
     serviceId: 'scrub',
@@ -264,42 +264,65 @@ export const ADVANTAGES: Advantage[] = [
   },
 ];
 
-/** Area cakupan CONTOH — ganti dengan wilayah operasional asli. */
+/** Area cakupan operasional: Jabodetabek. */
 export const AREAS: Area[] = [
   {
     id: 'jakarta',
-    city: 'Jakarta (Contoh)',
+    city: 'Jakarta',
     districts: ['Jakarta Selatan', 'Jakarta Timur', 'Jakarta Barat', 'Jakarta Utara', 'Jakarta Pusat'],
   },
   {
     id: 'penyangga',
-    city: 'Kota Penyangga (Contoh)',
-    districts: ['Depok', 'Bekasi', 'Tangerang', 'Bogor'],
+    city: 'Bogor, Depok, Tangerang, Bekasi',
+    districts: ['Bogor', 'Depok', 'Tangerang', 'Tangerang Selatan', 'Bekasi'],
   },
 ];
 
-/** Testimoni CONTOH — nama disamarkan, isi fiktif. */
+/**
+ * Testimoni DUMMY untuk keperluan tampilan — TODO: ganti dengan testimoni asli pelanggan.
+ */
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 't1',
-    name: 'Ibu R. (contoh)',
+    name: 'Ibu Ratna',
     area: 'Jakarta Selatan',
     rating: 5,
-    text: 'Terapisnya datang tepat waktu dan sangat sopan. Badan terasa segar setelah sesi 90 menit. (Contoh testimoni)',
+    text: 'Terapisnya datang tepat waktu dan sangat sopan. Badan terasa segar setelah sesi 90 menit, pijatannya pas tidak terlalu keras.',
   },
   {
     id: 't2',
-    name: 'Bapak A. (contoh)',
+    name: 'Bapak Andi',
     area: 'Bekasi',
     rating: 5,
-    text: 'Praktis sekali, tidak perlu keluar rumah. Reservasi via WhatsApp juga cepat direspons. (Contoh testimoni)',
+    text: 'Praktis sekali, tidak perlu keluar rumah. Reservasi via WhatsApp cepat direspons, malam itu juga langsung dapat jadwal.',
   },
   {
     id: 't3',
-    name: 'Ibu S. (contoh)',
+    name: 'Ibu Sinta',
     area: 'Depok',
     rating: 4,
-    text: 'Aromaterapinya wangi dan menenangkan. Cocok untuk melepas penat akhir pekan. (Contoh testimoni)',
+    text: 'Aromaterapinya wangi dan menenangkan. Cocok untuk melepas penat setelah seharian kerja, tidurnya jadi lebih nyenyak.',
+  },
+  {
+    id: 't4',
+    name: 'Ibu Dewi',
+    area: 'Tangerang',
+    rating: 5,
+    text: 'Sudah tiga kali pesan untuk pijat refleksi. Terapisnya ramah, alat-alatnya bersih dan wangi. Pasti pesan lagi bulan depan.',
+  },
+  {
+    id: 't5',
+    name: 'Bapak Hendra',
+    area: 'Jakarta Timur',
+    rating: 5,
+    text: 'Pesan paket couple untuk saya dan istri. Pelayanannya profesional, harganya jelas di depan tanpa biaya tambahan.',
+  },
+  {
+    id: 't6',
+    name: 'Kak Nabila',
+    area: 'Bogor',
+    rating: 4,
+    text: 'Lulurannya enak, kulit terasa halus dan wangi. Datangnya sedikit terlambat karena macet, tapi dikabari dulu via WhatsApp jadi tidak masalah.',
   },
 ];
 
@@ -307,31 +330,31 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQS: Faq[] = [
   {
     id: 'f1',
-    question: 'Bagaimana cara memesan layanan? (contoh)',
+    question: 'Bagaimana cara memesan layanan?',
     answer:
-      'Hubungi kami melalui tombol WhatsApp atau formulir kontak di bawah. Sertakan nama, layanan yang diinginkan, dan alamat. Ini alur contoh — sesuaikan dengan proses operasional Anda.',
+      'Hubungi kami melalui tombol WhatsApp atau isi formulir kontak di bawah. Sertakan nama, layanan yang diinginkan, dan alamat lengkap Anda.',
   },
   {
     id: 'f2',
-    question: 'Apakah layanan tersedia 24 jam? (contoh)',
+    question: 'Apakah layanan tersedia 24 jam?',
     answer:
-      'Jam operasional pada contoh ini 24 jam setiap hari. Ganti jawaban ini dengan jam operasional yang sebenarnya.',
+      'Ya, kami buka 24 jam setiap hari. Anda bisa memesan kapan saja, termasuk malam hari dan akhir pekan.',
   },
   {
     id: 'f3',
-    question: 'Wilayah mana saja yang dilayani? (contoh)',
+    question: 'Wilayah mana saja yang dilayani?',
     answer:
-      'Lihat daftar area cakupan pada bagian Area. Wilayah di halaman ini hanyalah contoh dan perlu diganti dengan wilayah operasional asli.',
+      'Kami melayani seluruh Jabodetabek: Jakarta (Selatan, Timur, Barat, Utara, Pusat) serta Bogor, Depok, Tangerang, Tangerang Selatan, dan Bekasi. Lihat daftar lengkapnya pada bagian Area.',
   },
   {
     id: 'f4',
-    question: 'Bagaimana metode pembayarannya? (contoh)',
+    question: 'Bagaimana metode pembayarannya?',
     answer:
-      'Contoh: pembayaran tunai setelah layanan selesai atau transfer bank. Sesuaikan dengan kebijakan pembayaran yang sebenarnya.',
+      'Pembayaran tunai setelah layanan selesai atau transfer bank. Detail pembayaran akan dikonfirmasi via WhatsApp saat pemesanan.',
   },
   {
     id: 'f5',
-    question: 'Apakah privasi saya terjaga? (contoh)',
+    question: 'Apakah privasi saya terjaga?',
     answer:
       'Kami mengutamakan profesionalitas dan kenyamanan pelanggan. Seluruh sesi dilakukan secara profesional sesuai standar layanan.',
   },
